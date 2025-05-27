@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS user_member1;
+CREATE DATABASE IF NOT EXISTS daily_question;
 USE user_member1;
 CREATE TABLE users (
     user_id INT NOT NULL AUTO_INCREMENT,

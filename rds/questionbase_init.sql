@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS question_base1;
+CREATE DATABASE IF NOT EXISTS daily_question;
 USE question_base1;
 CREATE TABLE questions (
     question_id INT NOT NULL AUTO_INCREMENT,
