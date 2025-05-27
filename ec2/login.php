@@ -30,7 +30,7 @@
         $update->execute();
 
         // 再導向對應的網頁
-        $redirect = ($user === 'admin') ? "admin.html" : "user.html";
+        $redirect = "index.html";
         echo json_encode(["success" => true, "redirect" => $redirect]);
         
         exit;
