@@ -30,7 +30,7 @@
         $update->execute();
 
         // 再導向對應的網頁
-        $redirect = "index.html";
+        $redirect = "question.html";
         echo json_encode(["success" => true, "redirect" => $redirect]);
         
         exit;
