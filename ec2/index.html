@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css?v=1" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+</head>
+<body>
+  <div class="screen-1">
+    <!-- 上方 Logo -->
+    <img src="cube.png" class="logo" alt="logo" />
+
+    <form id="login-form">
+      <!-- 帳號欄 -->
+      <div class="account">
+        <label for="account">account</label>
+        <div class="input-group">
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" name="account" placeholder="Enter your account" />
+        </div>
+      </div>
+
+      <!-- 密碼欄（含眼睛） -->
+      <div class="password">
+        <label for="password">password</label>
+        <div class="input-group">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input class="pas" type="password" name="password" placeholder="············" />
+          <ion-icon class="show-hide" name="eye-outline" onclick="togglePassword()"></ion-icon>
+        </div>
+      </div>
+
+      <!-- 登入按鈕 -->
+      <button class="login" type="submit">Login</button>
+
+      <!-- 底部註冊 -->
+      <div class="footer">
+        <span onclick="location.href='register.html'">還沒有帳號？註冊</span>
+      </div>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
