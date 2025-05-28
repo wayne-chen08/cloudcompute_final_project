@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>註冊帳號</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <div class="register-container">
+    <form id="register-form">
+      <h2>註冊帳號</h2>
+
+      <div class="input-box">
+        <label for="account">帳號</label>
+        <input type="text" name="account" placeholder="請輸入帳號" required />
+      </div>
+
+      <div class="input-box">
+        <label for="password">密碼</label>
+        <input type="password" name="password" placeholder="請輸入密碼" required />
+      </div>
+
+      <button class="submit-btn" type="submit">註冊</button>
+
+      <div id="message" class="message"></div>
+
+      <div class="footer">
+        <span onclick="location.href='login.html'">已有帳號？登入</span>
+      </div>
+    </form>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

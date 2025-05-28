@@ -1,0 +1,83 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dde5f4;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  background: #f1f7fe;
+  padding: 2.5em 2em;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+h2 {
+  text-align: center;
+  color: #3e4684;
+  margin-bottom: 0.5em;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background: white;
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0 0 1em #e6e9f9;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+.submit-btn {
+  padding: 1em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #5e5e5e;
+  cursor: pointer;
+}
+
+.message {
+  text-align: center;
+  font-size: 0.9em;
+  padding-top: 0.5em;
+  font-weight: 500;
+}
+
+.message.success {
+  color: #00c853;
+}
+
+.message.error {
+  color: #e53935;
+}

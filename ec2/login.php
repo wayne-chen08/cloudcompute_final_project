@@ -1,10 +1,11 @@
 <?php
+    session_start();
     header('Content-Type: application/json');
     // 連線資料庫，記得改自己的
     $dbhost = "localhost:3308";
     $dbuser = "admin";
     $dbpass = "1234";
-    $dbname = "user_member1";
+    $dbname = "daily_question";
     $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
     if ($conn -> connect_error){
         echo json_encode(["success" => false, "message" => "資料庫連線失敗"]);
@@ -24,11 +25,9 @@
     
     // query有搜到，也就是帳號和密碼有對應的資料
     if ($result->num_rows > 0){
-        // 先更新對應帳號的最後登入時間
-        $update = $conn->prepare("UPDATE users SET last_login = NOW() WHERE username = ?");
-        $update->bind_param("s", $user);
-        $update->execute();
-
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row['user_id']; // 儲存登入者 ID
+        
         // 再導向對應的網頁
         $redirect = "question.html";
         echo json_encode(["success" => true, "redirect" => $redirect]);
