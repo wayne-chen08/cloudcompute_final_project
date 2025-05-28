@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS daily_question;
-USE question_base1;
+USE daily_question;
 CREATE TABLE questions (
     question_id INT NOT NULL AUTO_INCREMENT,
     description VARCHAR(512) NOT NULL,
