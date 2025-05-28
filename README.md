@@ -17,3 +17,6 @@ lambda_function：裡面的db_settings要改成rds
 dblink.php：改資料庫的連線（應該只需要改這個，如果有問題可以檢查看看其他的php檔，可能我有忘記改的）
 rds/questionbase.sql：pic的裡面的連結也要改自己存的s3位址
 index.html：cube放的連結（s3）
+
+s3資料夾裡的檔案要自己傳上s3
+rds資料夾裡的sql指令可以直接在mysql workbench裡執行就會建立好table，但是記得要先改題庫的圖片連結
