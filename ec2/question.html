@@ -9,16 +9,23 @@
   <!-- ✅ 頁面右上角：狀態顯示 + 登出 -->
   <div style="position: absolute; top: 20px; right: 30px; display: flex; align-items: center; gap: 1em;">
     <div class="status-box" id="status-box">Unsolved</div>
-    <a href="logout.php" style="font-size: 0.9em; color: #3e4684; text-decoration: none;">登出</a>
+    <a href="logout.php" class="logout-btn">登出</a>
   </div>
 
   <!-- ✅ 主畫面 -->
+<div class="page-container"></div>
   <div class="screen-1">
-    <!-- 題目區塊 -->
     <form id="question-form">
-      <div class="question-box">
-        <label for="question">題目</label>
-        <div id="question-text" style="white-space: pre-wrap;"></div>
+      <!-- ✅ 包含題目與圖片的外框 -->
+      <div class="question-wrapper">
+        <!-- 題目標題與內容 -->
+        <div class="question-box">
+          <label for="question">題目</label>
+          <div id="question-text" style="white-space: pre-wrap;"></div>
+
+          <!-- 題目圖片（若有） -->
+          <img id="question-image" style="display: none; margin-top: 1em; max-width: 100%; border-radius: 8px;" />
+        </div>
       </div>
 
       <!-- 答案輸入 -->
@@ -29,16 +36,15 @@
         </div>
       </div>
 
-      <!-- 提交 -->
+      <!-- 提交按鈕 -->
       <button class="submit-btn" type="submit">提交答案</button>
     </form>
 
-    <!-- 查看解析按鈕（預設禁用） -->
+    <!-- 查看解析 -->
     <button id="show-explanation" class="submit-btn" type="button" disabled>查看解析</button>
-
-    <!-- 顯示解析內容 -->
     <div id="explanation-box" style="display: none; margin-top: 10px; white-space: pre-wrap;"></div>
   </div>
+</div>
 
   <script src="question.js"></script>
 </body>

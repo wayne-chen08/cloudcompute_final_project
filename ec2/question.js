@@ -3,7 +3,20 @@ fetch('get_today_question.php')
   .then(res => res.json())
   .then(data => {
     if (data.success) {
+      // 題目文字
       document.getElementById("question-text").textContent = data.description;
+
+      // 題目圖片（若有）
+      const img = document.getElementById("question-image");
+      if (data.pic) {
+        img.src = data.pic;
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
+
+      // 記下題目 ID，提交答案要用
+      window.CURRENT_QUESTION_ID = data.question_id;
     } else {
       alert(data.message || "題目載入失敗");
     }
@@ -37,18 +50,24 @@ fetch("get_answer_status.php")
 document.getElementById("question-form").addEventListener("submit", function (e) {
   e.preventDefault();
   const answer = document.getElementById("user_answer").value;
+  const qid = window.CURRENT_QUESTION_ID;
+
+  if (!qid) {
+    alert("題目尚未載入，請稍後再試");
+    return;
+  }
 
   fetch("answer.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ answer })
+    body: JSON.stringify({ answer, question_id: qid })
   })
     .then(res => res.json())
     .then(data => {
       alert(data.message);
       if (data.success) {
-        // 重新載入作答狀態與解析按鈕
-        location.reload(); // 可改成局部刷新
+        // 重新載入狀態與解析按鈕狀態
+        location.reload(); // 也可以選擇只更新狀態區塊與解析按鈕
       }
     })
     .catch(err => {

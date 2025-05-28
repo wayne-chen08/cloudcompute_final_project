@@ -106,11 +106,11 @@ body {
   font-weight: 500;
 }
 .screen-1 .footer {
-  display: flex;
-  font-size: 0.7em;
+  text-align: center;
+  font-size: 0.9em;
   color: #5e5e5e;
-  gap: 14em;
-  padding-bottom: 10em;
+  margin-top: 1em;
+  padding-bottom: 2em;
 }
 .screen-1 .footer span {
   cursor: pointer;
