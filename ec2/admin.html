@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>新增邏輯題目</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <h2>新增每日邏輯題目</h2>
+  <form id="question-form">
+    <label>題目敘述：<br><textarea name="description" required></textarea></label><br>
+    <label>答案：<br><input type="text" name="answer" required></label><br>
+    <label>解析（可留空）：<br><textarea name="explanation"></textarea></label><br><br>
+    <button type="submit">送出</button>
+  </form>
+  <div id="result"></div>
+  <script src="admin.js"></script>
+</body>
+</html>

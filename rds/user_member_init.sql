@@ -11,4 +11,5 @@ CREATE TABLE users (
 INSERT INTO users (user_id, username, password, answered_count, correct_count)
 VALUES
 (1, 'u1', 'u1', 0, 0),
-(2, 'user', 'userpass', 0, 0);
+(2, 'user', 'userpass', 0, 0),
+(3, 'admin', 'adminpass', 0, 0);

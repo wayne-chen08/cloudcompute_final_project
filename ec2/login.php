@@ -28,8 +28,14 @@
         $row = $result->fetch_assoc();
         $_SESSION['user_id'] = $row['user_id']; // 儲存登入者 ID
         
+        if ($user === 'admin') {
+            $redirect = "admin.html"; // 進入題目管理頁面
+        } 
+        else {
+            $redirect = "question.html"; // 一般使用者答題頁
+        }
+
         // 再導向對應的網頁
-        $redirect = "question.html";
         echo json_encode(["success" => true, "redirect" => $redirect]);
         
         exit;
