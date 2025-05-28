@@ -17,6 +17,7 @@ S3:
 存要用的素材
 
 }
+
 要改的地方：{
 
 lambda_function：裡面的db_settings要改成rds
@@ -30,7 +31,9 @@ index.html：cube放的連結（s3）
 }
 
 {
+
 s3資料夾裡的檔案要自己傳上s3
 
 rds資料夾裡的sql指令可以直接在mysql workbench裡執行就會建立好table，但是記得要先改題庫的圖片連結
+
 }
