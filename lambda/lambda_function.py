@@ -5,10 +5,10 @@ import datetime
 def lambda_handler(event, context):
     # 資料庫連線設定
     db_settings = {
-        "host": "YOUR_RDS_ENDPOINT",
-        "port": 3306,
-        "user": "YOUR_DB_USER",
-        "password": "YOUR_DB_PASSWORD",
+        "host": "localhost",  
+        "port": 3308,
+        "user": "admin",
+        "password": "1234",
         "db": "daily_question",
         "charset": "utf8mb4"
     }
@@ -61,3 +61,10 @@ def lambda_handler(event, context):
             cursor.close()
         if conn:
             conn.close()
+
+if __name__ == "__main__":
+    # locaL testing
+    event = {}
+    context = None
+    response = lambda_handler(event, context)
+    print(response)

@@ -13,6 +13,7 @@ S3:
 存要用的素材
 
 要改的地方：
-每個php：改資料庫的連接
+lambda_function：裡面的db_settings要改成rds
+dblink.php：改資料庫的連線（應該只需要改這個，如果有問題可以檢查看看其他的php檔，可能我有忘記改的）
 rds/questionbase.sql：pic的裡面的連結也要改自己存的s3位址
 index.html：cube放的連結（s3）

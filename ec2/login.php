@@ -1,17 +1,8 @@
 <?php
     session_start();
     header('Content-Type: application/json');
-    // 連線資料庫，記得改自己的
-    $dbhost = "localhost:3308";
-    $dbuser = "admin";
-    $dbpass = "1234";
-    $dbname = "daily_question";
-    $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-    if ($conn -> connect_error){
-        echo json_encode(["success" => false, "message" => "資料庫連線失敗"]);
-
-        exit;
-    }
+    
+    include("dblink.php");
 
     // 取得輸入的帳號跟密碼
     $user = $_POST['account'];
