@@ -12,7 +12,9 @@ def lambda_handler(event, context):
         "db": "daily_question",
         "charset": "utf8mb4"
     }
-
+    
+    conn = None
+    cursor = None
     try:
         conn = pymysql.connect(**db_settings)
         cursor = conn.cursor()
