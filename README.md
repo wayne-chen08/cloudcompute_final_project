@@ -23,7 +23,7 @@ rds資料夾裡的sql指令可以直接在mysql workbench裡執行就會建立�
 lambda要上傳select_daily_question.zip  
 
 所有功能：  
-index.html：登入頁面，眼睛可以解除密碼隱藏，下方可以註冊帳號，帳密輸錯會提示，用admin身分的帳號可以到admin.html  
+index.html：登入頁面，眼睛可以解除密碼隱藏，下方可以註冊帳號，帳密輸錯會提示，用admin身分的帳號可以到admin.html。  
 question.html：要作答過才能看解析，左上會顯示目前登入的帳號有沒有答過這題（Unsolved, Attempted, Solved)，可以登出，提交答案後會根據你的回答給提示("答對了！", "答錯了，請再試一次", "你已經答對過這題，無需再答", "這次你答對了！已更新紀錄", "你之前答錯過這題，這次也沒對 😢")。  
 admin.html：新增題目用的，解析可以不寫，會自動在mysql裡變成""。  
 register.html：註冊帳號，不能有同個帳號，註冊成功會自動登入，下面的已有帳號？登入可以回到index.html。  
