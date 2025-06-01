@@ -1,6 +1,7 @@
 # final
 cloudcompute_final_project
 
+![alt text](image.png)
 IAM沒有辦法用，所以沒辦法用程式加圖片到s3  
 
 EC2:
